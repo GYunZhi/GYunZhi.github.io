@@ -92,14 +92,14 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: / || home
-  archives: /archives/ || archive
-  # about: /about/ || user
-  tags: /tags/ || tags
-  categories: /categories/ || th
-  # schedule: /schedule/ || calendar
-  # sitemap: /sitemap.xml || sitemap
-  commonweal: /404/ || heartbeat
+  home: / || home                       #主页
+  categories: /categories/ || th        #分类
+  tags: /tags/ || tags                  #标签
+  archives: /archives/ || archive       #归档
+  about: /about/ || user                #关于
+  # schedule: /schedule/ || calendar      #日程表
+  # sitemap: /sitemap.xml || sitemap      #站点地图
+  # commonweal: /404/ || heartbeat        #公益404
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -126,9 +126,9 @@ scheme: Muse
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+social:
+  GitHub: https://github.com/yourname || github
+  E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
