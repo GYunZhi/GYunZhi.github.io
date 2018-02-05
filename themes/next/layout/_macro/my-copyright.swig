@@ -8,7 +8,7 @@
   <!-- <p><span>最后更新:</span>{{ page.updated.format("YYYY年MM月DD日 - HH:MM") }}</p></p> -->
 
   <p><span>文章作者 :</span><a href="/" title="访问 {{ theme.author }} 的个人博客">{{ theme.author }}</a></p>
-  <p><span>发布时间:</span>{{ page.date.format("YYYY年MM月DD日) }}</p>
+  <p><span>发布时间:</span>{{ page.date.format("YYYY年MM月DD日") }}</p>
   <p><span>本文链接 :</span><a href="{{ url_for(page.path) }}" title="{{ page.title }}">{{ page.permalink }}</a><span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="{{ page.permalink }}"  aria-label="复制成功！"></i></span></p>
   <p><span>版权声明 :</span>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！</p>
 </div>
