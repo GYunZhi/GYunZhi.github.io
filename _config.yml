@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site 
-title: Hexo
+title: 札记
 subtitle:
 description: 学会学习的人，是幸福的人
 author: GYunZhi
@@ -13,7 +13,7 @@ avatar: /images/avatar.gif
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://gyunzhi.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -81,3 +81,7 @@ deploy:
   type: git
   repo: git@github.com:GYunZhi/GYunZhi.github.io.git
   branch: master
+
+# Extensions
+## Plugins: http://hexo.io/plugins/
+plugins: hexo-generate-feed
