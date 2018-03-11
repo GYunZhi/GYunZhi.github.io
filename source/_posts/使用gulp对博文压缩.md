@@ -145,5 +145,3 @@ gulp.task('default', ['build'])
 gulp build
 hexo d
 ```
-
-说明：
