@@ -1,5 +1,5 @@
 ---
-title: RN Android环境生成签名密钥、打包APK
+title: Android环境生成签名密钥、打包APK
 copyright: true
 date: 2018-03-28 17:08:23
 tags: React-Native
