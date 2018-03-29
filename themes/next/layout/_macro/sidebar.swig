@@ -161,7 +161,8 @@
       <!--/noindex-->
       {% endif %}
 
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=2026957271&auto=1&height=90"></iframe>
+      <!-- 网易云音乐 -->
+      <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=2026957271&auto=1&height=90"></iframe> -->
 
       {% if theme.sidebar.b2t %}
         <div class="back-to-top">
