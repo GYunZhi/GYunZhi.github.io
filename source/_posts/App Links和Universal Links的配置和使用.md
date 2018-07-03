@@ -30,9 +30,12 @@ categories: React-Native
 
 ```
 [{  
-"relation": ["delegate_permission/common.handle_all_urls"], 
-"target": { "namespace": "android_app",    "package_name": "com.mycompany.myapp",    						"sha256_cert_fingerprints": ["6C:EC:C5:0E:34:AE....EB:0C:9B"] 
-		 }
+  "relation": ["delegate_permission/common.handle_all_urls"], 
+  "target": { 
+    "namespace": "android_app",    
+    "package_name": "com.mycompany.myapp",    						
+    "sha256_cert_fingerprints": ["6C:EC:C5:0E:34:AE....EB:0C:9B"] 
+  }
 }]
 ```
 
