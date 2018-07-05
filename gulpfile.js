@@ -6,6 +6,7 @@ var htmlclean = require('gulp-htmlclean');
 var imagemin = require('gulp-imagemin');
 var del = require('del');
 var runSequence = require('run-sequence');
+var gutil = require('gulp-util');
 var Hexo = require('hexo');
 
 // 清除public文件夹
@@ -58,6 +59,9 @@ gulp.task('minify-html', function() {
 gulp.task('minify-js', function() {
     return gulp.src('./public/**/*.js')
         .pipe(uglify())
+        .on('error', function (err) {
+            gutil.log(gutil.colors.red('[Error]'), err.toString());
+        })
         .pipe(gulp.dest('./public'));
 });
 

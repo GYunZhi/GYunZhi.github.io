@@ -107,6 +107,7 @@ categories: 服务器
 ### host文件的说明
 
 在Window系统中有个Hosts文件（没有后缀名），在Window7下(C:\Windows\System32\drivers\etc)，该文件其实是一个纯文本的文件，用普通的文本编辑软件如记事本等都能打开。
+
 这个文件是根据TCP/IPforWindows的标准来工作的，它的作用是包含IP地址和Host name(主机名)的映射关系，是一个映射IP地址和Hostname(主机名)的规定，规定要求每段只能包括一个映射关系，IP地址要放在每段的最前面，空格后再写上映射的Host name(主机名)。对于这段的映射说明用“#”分割后用文字说明。
 
 现在让我们来看看Hosts在Windows中是怎么工作的。
@@ -134,6 +135,7 @@ categories: 服务器
 
 ### 相关阅读链接
 
-[Apache虚拟主机的配置](https://www.cnblogs.com/lucky-man/p/6207851.html)
+- ##### [Apache虚拟主机的配置](https://www.cnblogs.com/lucky-man/p/6207851.html)
+- ##### [Host文件的作用和介绍](https://www.cnblogs.com/Sungeek/p/5845797.html)
 
-[Host文件的作用和介绍](https://www.cnblogs.com/Sungeek/p/5845797.html)
+
