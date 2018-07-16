@@ -95,6 +95,6 @@ IOS下仅支持不支持HTTPS获取apple-app-site-association文件，所以我�
 
 ### 相关阅读链接
 
-[Android M App Links实现](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0718/3200.html)
+- ##### [Android M App Links实现](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0718/3200.html)
+- ##### [IOS9 Universal Links的使用](http://www.cocoachina.com/ios/20160719/17108.html)
 
-[IOS9 Universal Links的使用](http://www.cocoachina.com/ios/20160719/17108.html)
