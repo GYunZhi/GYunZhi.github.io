@@ -19,5 +19,18 @@ if theme.baidu_analytics
       s.parentNode.insertBefore(hm, s);
       })();
 
+if theme.ptengine_analytics
+  script.
+      window._pt_lt = new Date().getTime();
+      window._pt_sp_2 = [];
+      _pt_sp_2.push('setAccount,#{theme.ptengine_analytics}');
+      var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      (function() {
+          var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
+          atag.src = _protocol + 'js.ptengine.cn/#{theme.ptengine_analytics}.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(atag, s);
+      })();
+
 if theme.local_search == true
   script(type='text/javascript', src=url_for(theme.js) + '/search.json.js' + '?v=' + theme.version)
