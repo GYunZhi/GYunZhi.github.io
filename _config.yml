@@ -13,8 +13,8 @@ avatar: /images/avatar.gif
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-# url: https://gyunzhi.github.io/
-url: https://gongyz.gitee.io/
+url: https://gyunzhi.github.io/
+# url: https://gongyz.gitee.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -80,8 +80,8 @@ theme: BlueLake
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  # repo: git@github.com:GYunZhi/GYunZhi.github.io.git
-  repo: https://gitee.com/gongyz/gongyz.git
+  repo: git@github.com:GYunZhi/GYunZhi.github.io.git
+  # repo: https://gitee.com/gongyz/gongyz.git
   branch: master
 
 # Extensions
