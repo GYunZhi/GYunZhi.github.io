@@ -23,7 +23,7 @@ menu:
 # Sidebar
 widgets:
   - recent_posts
-  - aplayer
+  #- aplayer
   - category
   - tag
   - archive
