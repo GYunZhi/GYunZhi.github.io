@@ -1,7 +1,7 @@
 ---
 title: App Links和Universal Links的配置和使用
 copyright: true
-date: 2018-03-28 22:39:31
+date: 2018-04-16 22:39:31
 tags: React-Native
 categories: React-Native
 ---
@@ -39,7 +39,7 @@ categories: React-Native
 }]
 ```
 
-你可以在AndroidManifest.xml 文件中找到app的package name。你还需要通过在终端中执行以下命令查看keystore参数信息来找到sha256指纹(关于生成签名密钥，你可以看下我之前的博文)：
+你可以在AndroidManifest.xml 文件中找到app的package name。你还需要通过在终端中执行以下命令查看keystore参数信息来找到sha256指纹(关于生成签名密钥，你可以看下我之前的文章)：
 
 ```
 keytool -list -v -keystore my-release-key.keystore
@@ -54,15 +54,13 @@ keytool -list -v -keystore my-release-key.keystore
 
 #### 3.上传这个文件到服务器的/.well-known文件夹
 
-如果你的服务器是windows系统，.well-know文件里可以通过命令行的形式创建。
+如果你的服务器是windows系统，.well-know文件夹可以通过命令行的形式创建。
 
 ### Universal Links
 
-如果你还没有注册App，则需要登陆developer.apple.com注册。然后在Identifiers下AppIDs找到自己的App ID，并打开Associated Domains服务。
-
 #### 1. 注册App并打开Associated Domains服务
 
-如果你还没有注册App，则需要登陆developer.apple.com并且注册你的App，然后打开Associated Domains服务。
+如果你还没有注册App，则需要登陆developer.apple.com注册。然后在Identifiers下AppIDs找到自己的App ID，并打开Associated Domains服务。
 
 {% asset_img 1.png %}
 

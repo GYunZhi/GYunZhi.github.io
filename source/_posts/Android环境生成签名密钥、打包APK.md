@@ -1,7 +1,7 @@
 ---
 title: Android环境生成签名密钥、打包APK
 copyright: true
-date: 2018-03-28 17:08:23
+date: 2018-02-25 17:08:23
 tags: React-Native
 categories: React-Native
 ---
@@ -27,7 +27,7 @@ $ keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keya
 ### 设置gradle变量
 
 1. 把`my-release-key.keystore`文件放到你工程中的`android/app`文件夹下。
-2. 编辑用户`~/.gradle/gradle.properties`或者是`android/gradle.properties`，添加如下的代码（注意把其中的`****`替换为相应密码）
+2. 编辑用户目下的`~/.gradle/gradle.properties`或者是RN项目中下的`android/gradle.properties`文件，添加如下的代码（注意把其中的`****`替换为相应密码）
 
 **注意：~表示用户目录，比如windows上可能是C:\Users\用户名，而mac上可能是/Users/用户名。**
 
