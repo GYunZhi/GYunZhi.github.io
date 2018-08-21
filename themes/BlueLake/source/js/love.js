@@ -134,6 +134,7 @@ if(x.length > 0){
 		}
 	}
 }
+
 //Get protocol
 if (!canonicalURL){
 	curProtocol = window.location.protocol.split(':')[0];

@@ -28,7 +28,7 @@ Nginx is a free,open-source,high-performance http server and reverse proxy,as we
 - web服务：服务端通过网络可以提供给客户端所请求的资源
 - 反向代理：代表资源服务器来回应客户端的请求，至于资源服务器为什么不自己回应后面会解释
 - IMAP/POP3：是一种stream传输协议，常常被用来做一些邮件传输
-  - IMAP：Internet Mail Access Protocol 是一种交互式的邮件邮件传输协议，交互式说的就是客户端可以和服务端针对邮件的各种操作同步，一份邮件，客户端有，服务端也有，客户端有什么操作会同步到服务端，反之亦然。
+  - IMAP：Internet Mail Access Protocol 是一种交互式的邮件传输协议，交互式说的就是客户端可以和服务端针对邮件的各种操作同步，一份邮件，客户端有，服务端也有，客户端有什么操作会同步到服务端，反之亦然。
   - POP3：Post Office Protocol 3邮件传输协议相比IMAP协议只是服务器不保留邮件，一旦给了客户端，自行删除对应的邮件，客户端对邮件的各种操作与服务器无关
 
 {% asset_img 2.jpg %}
