@@ -42,7 +42,7 @@ categories: 服务器
 </VirtualHost>  
 ```
 
-这里配置了两个虚拟主机，这两个主机使用的都是80端口，第一个虚拟主机指定域名为“localhost”，服务器目录为“D:/wamp/www”，第二个虚拟你主机指定域名为"www.test.com ”，服务器目录为“D:/wamp/www/test”。
+这里配置了两个虚拟主机，这两个主机使用的都是80端口，第一个虚拟主机指定域名为“localhost”，服务器目录为“D:/wamp/www”，第二个虚拟主机指定域名为"www.test.com ”，服务器目录为“D:/wamp/www/test”。
 
 - 然后在Apache主配置文件conf/httpd.conf中包含这个配置文件，去掉前面的#就可以了：
 
@@ -139,5 +139,4 @@ categories: 服务器
 
 - ##### [Apache虚拟主机的配置](https://www.cnblogs.com/lucky-man/p/6207851.html)
 - ##### [Host文件的作用和介绍](https://www.cnblogs.com/Sungeek/p/5845797.html)
-
 
