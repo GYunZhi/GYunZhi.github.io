@@ -6,8 +6,6 @@ tags: Node
 categories: Node
 ---
 
-操作系统环境： windows 7 x64
-
 ### Node环境的安装
 
 #### 官网下载安装
@@ -21,9 +19,11 @@ node -v  查看   node 版本
 npm -v   查看   npm 版本
 ```
 
-#### 使用nvm安装
+#### 使用nvm安装  
 
-  安装nvm之前如果已经安装了node，没有关系，直接安装nvm，安装完成之后nvm会自动管理已经安装好的 node。
+   操作系统环境： windows 7 x64 
+
+   安装nvm之前如果已经安装了node，没有关系，直接安装nvm，安装完成之后nvm会自动管理已经安装好的 node。
 
 （1）安装nvm
 
