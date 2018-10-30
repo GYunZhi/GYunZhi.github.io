@@ -10,7 +10,7 @@ categories: 服务器
 
 HTTP服务器本质上也是一种应用程序——它通常运行在服务器之上，绑定服务器的IP地址并监听某一个tcp端口来接收并处理HTTP请求，这样客户端（一般来说是IE, Firefox，Chrome这样的浏览器）就能够通过HTTP协议来获取服务器上的网页（HTML格式）、文档（PDF格式）、音频（MP4格式）、视频（MOV格式）等资源。下图描述的就是这一过程：
 
-{% asset_img 1.jpg %}
+![mark](http://img.gongyz.cn/blog/181030/JcjcBmgLiK.jpg)
 
 不仅仅是Apache HTTP Server和Nginx，绝大多数编程语言所包含的类库中也都实现了简单的HTTP服务器方便开发者使用：
 
@@ -31,11 +31,11 @@ Nginx is a free,open-source,high-performance http server and reverse proxy,as we
   - IMAP：Internet Mail Access Protocol 是一种交互式的邮件传输协议，交互式说的就是客户端可以和服务端针对邮件的各种操作同步，一份邮件，客户端有，服务端也有，客户端有什么操作会同步到服务端，反之亦然。
   - POP3：Post Office Protocol 3邮件传输协议相比IMAP协议只是服务器不保留邮件，一旦给了客户端，自行删除对应的邮件，客户端对邮件的各种操作与服务器无关
 
-{% asset_img 2.jpg %}
-
-{% asset_img 3.jpg %}
+![mark](http://img.gongyz.cn/blog/181030/7e636B9cLk.jpg)
 
 注意代理的概念只要把握准正向和反向都是以客户端为参考的，从客户端发出的是正向，客户端接受的是反向，类似于原告的代理律师—正向代理；被告的代理律师—反向代理
+
+![mark](http://img.gongyz.cn/blog/181030/l7aA17kmhf.jpg)
 
 ### Tomcat
 
@@ -46,7 +46,7 @@ Nginx is a free,open-source,high-performance http server and reverse proxy,as we
 
 Apache HTTP Server和Nginx本身不支持生成动态页面，但它们可以通过其他模块来支持（例如通过Shell、PHP、Python脚本程序来动态生成内容）。如果想要使用Java程序来动态生成资源内容，使用这一类HTTP服务器很难做到。[Java Servlet](https://link.zhihu.com/?target=http%3A//www.tianmaying.com/tutorial/servlet-intro)技术以及衍生的[Java Server Pages](https://link.zhihu.com/?target=http%3A//www.tianmaying.com/tutorial/jsp-intro)技术可以让Java程序也具有处理HTTP请求并且返回内容（由程序动态控制）的能力，Tomcat正是支持运行Servlet/JSP应用程序的容器（Container）:
 
-{% asset_img 4.jpg %}
+![mark](http://img.gongyz.cn/blog/181030/md2FDEkdLa.jpg)
 
 Tomcat运行在JVM之上，它和HTTP服务器一样，绑定IP地址并监听TCP端口，同时还包含以下职责：
 
