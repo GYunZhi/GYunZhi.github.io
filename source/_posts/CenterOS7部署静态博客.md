@@ -1,65 +1,67 @@
 ---
 title: CenterOS7部署静态博客
 copyright: true
-date: 2018-06-23 20:09:59
+date: 2018-02-19 20:09:59
 tags: 服务器
 categories: 服务器
 ---
 
-```
+```bash
 yum install nginx       安装nginx 
 yum install git         安装git （git clone ...） 静态文放在/usr/src/blog下
 ```
 
-```
+```bash
 systemctl enable nginx  系统启动时运行nginx
 service nginx start     启动nginx服务
 service nginx stop	    停止nginx服务
 service nginx reload    重启nginx服务
 ```
 
-```
+```bash
 pwd                     查看当前目录
 ll/dir                  查看目录下文件和文件夹
 mv 文件名 新文件名       修改文件夹名称
 vi nginx.conf           编辑文件
 ```
 
-    user  nginx;
-    worker_processes  1;
-    error_log  /var/log/nginx/error.log warn;
-    pid        /var/run/nginx.pid;
-    events {
-        worker_connections  1024;
+```nginx
+user  nginx;
+worker_processes  1;
+error_log  /var/log/nginx/error.log warn;
+pid        /var/run/nginx.pid;
+events {
+    worker_connections  1024;
+}
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+	log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                  	  '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    #include /etc/nginx/conf.d/*.conf;  #关闭默认的配置
+
+    #自定义监听端口，指定静态站点所在目录
+    server {
+        listen  80;
+        server_name  localhost;
+        root   /usr/src/blog;
+        index  index.html index.htm;
     }
-    http {
-        include       /etc/nginx/mime.types;
-        default_type  application/octet-stream;
-    	log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-                      	  '$status $body_bytes_sent "$http_referer" '
-                          '"$http_user_agent" "$http_x_forwarded_for"';
-        access_log  /var/log/nginx/access.log  main;
-    
-        sendfile        on;
-        #tcp_nopush     on;
-    
-        keepalive_timeout  65;
-    
-        #gzip  on;
-    
-        #include /etc/nginx/conf.d/*.conf;  #关闭默认的配置
-    
-        #自定义监听端口，指定静态站点所在目录
-        server {
-            listen  80;
-            server_name  localhost;
-            root   /usr/src/blog;
-            index  index.html index.htm;
-        }
-    }
+}
+```
 开启`https`时`nginx`配置
 
-```
+```nginx
 user  nginx;
 worker_processes  1;
 error_log  /var/log/nginx/error.log warn;

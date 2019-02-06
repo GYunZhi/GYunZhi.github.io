@@ -1,7 +1,7 @@
 ---
 title: 关于我
 date: 2018-01-11 13:15:16
-comments: true
+comments: false
 ---
 <!-- <center>一只学习前端的小菜鸟，欢迎分享知识。</center>
 <center>From GYunZhi</center>

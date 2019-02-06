@@ -12,7 +12,7 @@ categories: Hexo
 
 安装完后替换为淘宝镜像源避免因网速问题导致文件下载不全：
 
-```
+```bash
 npm config set registry https://registry.npm.taobao.org
 npm config set disturl https://npm.taobao.org/dist
 ```
@@ -21,10 +21,9 @@ npm config set disturl https://npm.taobao.org/dist
 
 安装gulp需要全局安装一次，再本地环境安装一次，参见[gulp入门指南](http://www.gulpjs.com.cn/docs/getting-started/)
 
-```
+```bash
 npm install gulp -g
 npm install gulp --save-dev
-
 ```
 
 #### 安装gulp相关插件
@@ -39,7 +38,7 @@ npm install gulp --save-dev
 > gulp-uglify
 > run-sequence
 
-```
+```bash
 npm install del --save-dev
 npm install gulp-clean-css --save-dev
 npm install gulp-htmlclean --save-dev
@@ -53,7 +52,7 @@ npm install run-sequence --save-dev
 
 在hexo项目根目录下（node_modules同目录），新增gulpfile.js文件，内容如下
 
-```
+```javascript
 var gulp = require('gulp');
 var minifycss = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
@@ -142,7 +141,7 @@ gulp.task('default', ['build'])
 
 #### 执行gulp压缩再部署
 
-```
+```bash
 gulp build
 hexo d
 ```

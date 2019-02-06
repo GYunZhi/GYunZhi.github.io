@@ -1,18 +1,18 @@
 ---
-title: Node基础
+title: Node基础知识
 copyright: true
-date: 2018-07-13 18:16:52
+date: 2018-10-18 18:16:52
 tags: Node
 categories: Node
 ---
+
+示例代码：https://gitee.com/gongyz/NodeJs.git
 
 ## module - 模块
 
 ### 概述
 
 Node应用由模块组成，采用CommonJS模块化规范，在node中一个文件就是一个模块，每个模块都有自己的作用域。
-
-示例代码：https://gitee.com/gongyz/NodeJs.git
 
 ### 特点
 
@@ -30,7 +30,7 @@ Node应用由模块组成，采用CommonJS模块化规范，在node中一个文�
 
 ​        module对象的属性：
 
-```
+```javascript
 	module.id 				 	模块的识别符，通常是带有绝对路径的模块文件名。
 	module.filename 	  模块的文件名，带有绝对路径。
 	module.loaded 			返回一个布尔值，表示模块是否已经完成加载。
@@ -107,7 +107,7 @@ Node应用由模块组成，采用CommonJS模块化规范，在node中一个文�
 
 process对象是一个全局变量，可以在任何地方都能访问到它，通过这个对象提供的属性和方法，使我们可以对当前运行的程序的进程进行访问和控制。
 
-```
+```javascript
 process.argv 				 	 返回一个包含命令行参数的数组
 process.env 				   返回用户环境信息
 process.version 		   返回node版本信息
@@ -119,7 +119,7 @@ process.arch 					返回CPU处理器架构
 
  
 
-```
+```javascript
 stdin、stdout：标准输入输出流（I/O操作）
 
 process.stdin.resume()  // 开启输入流, 监听输入流数据，默认开启
@@ -150,7 +150,7 @@ process.stdin.on('data', function (chunk) {
 
 **提示：vscode的内置调试控制台默认不从stdout的输出流中抓取内容，需要在vscode的启动配置(launch.json)中添加如下配置：** 
 
-```
+```javascript
 {
   // 使用 IntelliSense 了解相关属性。 
   // 悬停以查看现有属性的描述。
@@ -174,7 +174,7 @@ process.stdin.on('data', function (chunk) {
 
 `Buffer` 类用于操作二进制数据流 。
 
-```
+```javascript
 (1) new Buffer(size) （size [Number]） 		创建一个Buffer对象，并为这个对象分配空间大小
 
   var bf = new Buffer(5)
@@ -213,7 +213,7 @@ process.stdin.on('data', function (chunk) {
 
 
 
-```
+```javascript
 (1) buf.write(string[, offset[, length]][, encoding]) 将字符串写入到Buffer中
     string 要写入 buf 的字符串。
     offset 从Buffer对象中的第几位开始写入。默认: 0。
@@ -278,7 +278,7 @@ process.stdin.on('data', function (chunk) {
     console.log(bf);
 ```
 
-```
+```javascript
 
 静态方法
 
@@ -296,7 +296,7 @@ var arr=[new Buffer(str1),new Buffer(str2)];
 var bf=Buffer.concat(arr,11);		// 当第二个参数不给的时候，程序会默认计算buffer数组的总字节长度
 ```
 
-```
+```javascript
 // 标准输入输出流中的内容也是二进制数据
 process.stdout.write('请输入内容:');
 process.stdin.resume();
@@ -313,7 +313,7 @@ process.stdin.on('data',function (chunk){
 
 ### 读写操作
 
-```
+```javascript
 （1）打开一个文件
 	fs.open(path,flags,[mode],callback)  异步
 	fs.openSync(path, flags, [mode])     同步
@@ -338,7 +338,7 @@ process.stdin.on('data',function (chunk){
   console.log(fd);
 ```
 
-```
+```javascript
 （2）读取文件内容，从指定的文档标识符fd读取文件数据
 
 	fs.read(fd, buffer, offset, length, position, callback)  异步
@@ -383,7 +383,7 @@ process.stdin.on('data',function (chunk){
   })
 ```
 
-```
+```javascript
 (3) 写入数据到指定文件中/关闭打开的文件
 
   异步
@@ -442,7 +442,7 @@ process.stdin.on('data',function (chunk){
 
 <u>`fs.open`</u>、`fs.read`、 `fs.write`等是更底层的操作，node提供了一些封装好的方法供开发者调用，可以更方便的对文件进行读写操作
 
-```
+```javascript
 （1）写入数据
 	fs.writeFlie(filename, data, [options], callback)  异步的将数据写入一个文件，如果该文件不存在，则新建，如果存在则覆盖原来的内容。data 可以是一个string，也可以是一个原生buffer。
 	fs.writeFileSync(filename, data, [options])
@@ -500,7 +500,7 @@ process.stdin.on('data',function (chunk){
   })
 ```
 
-```
+```javascript
 （2）读取数据
 	fs.readFile(filename, [options], callback) 异步读取一个文件的全部内容
 	fs.readFileSync(filename, [options])
@@ -519,7 +519,7 @@ process.stdin.on('data',function (chunk){
 
 ### 常用的文件操作
 
-```
+```javascript
    fs.unlink(path, callback)  删除一个文件
    fs.rename(oldPath, newPath, callback)  重命名
    fs.stat(path, callback) 读取文件信息
@@ -558,7 +558,7 @@ process.stdin.on('data',function (chunk){
 
 ### 常用的文件夹操作
 
-```
+```javascript
   fs.mkdir(path, [mode], callback) 创建一个文件夹
   fs.rmdir(path, callback) 删除一个文件夹
   fs.readdir(path, callback) 读取文件夹
@@ -600,7 +600,7 @@ process.stdin.on('data',function (chunk){
 
 ### 搭建http服务器
 
-```
+```javascript
   // 加载一个http模块
   var http = require('http');
 
@@ -662,7 +662,7 @@ process.stdin.on('data',function (chunk){
 
 ### url处理
 
-```
+```javascript
 
 上一个例子中，监听到request事件时(当有客户端发送请求时)，返回的数据都是一样的
 实际开发过程中，对于不同请求，我们需要返回不同的数据,所以需要用到url模块对req对象中的url进行处理
@@ -711,7 +711,7 @@ server.on('request', function (req, rep) {
 
 ### 请求数据处理 
 
-```
+```javascript
   使用fs模块实现nodejs代码和html的分离
  	queryString模块  对get和和post方法提交的数据进行处理
   queryString.parse() : 将一个 querystring 反序列化为一个对象

@@ -14,7 +14,7 @@ categories: 服务器
 
 - 首先配置localhost，以免之后访问localhost出现问题
 
-```
+```bash
 <VirtualHost *:80>  
         DocumentRoot "D:/wamp/www"  
         ServerName localhost  
@@ -29,7 +29,7 @@ categories: 服务器
 
 - 配置其他项,可配置多项
 
-```
+```bash
 <VirtualHost *:80>  
         DocumentRoot "C:/wamp/www/test"  
         ServerName www.test.com  
@@ -46,7 +46,7 @@ categories: 服务器
 
 - 然后在Apache主配置文件conf/httpd.conf中包含这个配置文件，去掉前面的#就可以了：
 
-```
+```bash
 - #Include conf/extra/httpd-vhosts.conf 
 + Include conf/extra/httpd-vhosts.conf  
 ```
@@ -55,7 +55,7 @@ categories: 服务器
 
 注意：如果只是在本地进行配置测试的话，需要在hosts文件中加入域名到本地IP地址的映射（hosts文件位置：C:\Windows\System32\drivers\etc）：
 
-```
+```bash
 　127.0.0.1       localhost
 　127.0.0.1       www.test.com 
 ```
@@ -65,7 +65,7 @@ categories: 服务器
 - 首先在Apache配置文件conf/httpd.conf中修改配置让Apache服务器监听多个端口：
 
 
-```
+```bash
 　Listen 8080
 　Listen 80
 ```
@@ -77,13 +77,13 @@ categories: 服务器
 
 　　
 
-```
+```bash
 <VirtualHost _default_:80>
 　　DocumentRoot "D:/wamp/www"
 </VirtualHost>
 ```
 
-```
+```bash
 <VirtualHost *:8080>
    DocumentRoot "D:/wamp/www/test"
    <Directory "D:/wamp/www/test">
@@ -97,7 +97,7 @@ categories: 服务器
 - 在Apache主配置文件conf/httpd.conf中包含这个配置文件：
 
 
-```
+```bash
 - #Include conf/extra/httpd-vhosts.conf
 + Include conf/extra/httpd-vhosts.conf
 ```

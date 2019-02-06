@@ -1,7 +1,7 @@
 ---
 title: Connect框架源码分析
 copyright: true
-date: 2018-07-21 19:26:32
+date: 2018-11-10 19:26:32
 tags: Express
 categories: Express
 ---
@@ -10,7 +10,7 @@ Connect 是一个可扩展(中间件作为插件)的 Http 服务器框架，Conn
 
 ### 基本使用
 
-```
+```javascript
 const connect = require('connect');
 var createError = require('http-errors');
 var http = require('http');
@@ -44,7 +44,7 @@ app.listen(3000);
 
 首先我们看一下这个文件的模块出口，可以看到导出了一个`createServer`函数，这个函数最终返回的是app，app本身是一个函数，在下面一段代码中我们可以的看到它是作为了request事件的处理函数。同时它既继承了proto、EventEmitter属性和方法，也有自己的route、stack属性。
 
-```
+```javascript
 // 模块出口
 module.exports = createServer;
 
@@ -76,7 +76,7 @@ connect框架的核心是use、handle、call三个方法，我们来分析一下
 
 **use方法：添加中间件**
 
-```
+```javascript
 // 添加中间件
 proto.use = function use(route, fn) {
   var handle = fn;
@@ -118,7 +118,7 @@ proto.use = function use(route, fn) {
 
 **handle方法：根据当前路径找到stack中所有与之相匹配的中间件，通过call方法调用中间件处理函数**
 
-```
+```javascript
 proto.handle = function handle(req, res, out) {
   var index = 0;
   var protohost = getProtohost(req.url) || '';
@@ -192,7 +192,7 @@ proto.handle = function handle(req, res, out) {
 
 call方法:：执行handler中匹配到的中间件
 
-```
+```javascript
 function call(handle, route, err, req, res, next) {
   // handle函数的参数个数(3个参数为一般中间件，4个参数为错误处理中间件)
   // next参数接收的是上面定义的next函数，然后传入到中间件的handle函数中，handle函数同样通过next参数接  			收，所以在中间件中调用next后会继续执行下一个中间件
@@ -230,7 +230,7 @@ function call(handle, route, err, req, res, next) {
 
 ### 完整源码
 
-```
+```javascript
 'use strict';
 
 // 引入依赖
@@ -428,4 +428,3 @@ function getProtohost(url) {
   return fqdnIndex !== -1 ? url.substr(0, url.indexOf('/', 3 + fqdnIndex)) : undefined;
 }
 ```
-

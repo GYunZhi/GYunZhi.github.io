@@ -12,13 +12,13 @@ Android要求所有应用都有一个数字签名才会被允许安装在用户�
 
 你可以用`keytool`命令生成一个私有密钥。在Windows上`keytool`命令放在JDK的bin目录中（比如`C:\Program Files\Java\jdkx.x.x_x\bin`），如果你没有配置Java环境变量的话，需要先进入那个目录才能在命令行中执行此命令。
 
-```
+```bash
 $ keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
 ```
 
 执行命令后会要求你输入密钥库（keystore）和对应密钥的密码，然后设置一些发行相关的信息。最后它会在当前目录下生成一个叫做`my-release-key.keystore`的密钥库文件。在运行上面这条语句之后，密钥库里应该已经生成了一个单独的密钥，有效期为10000天。--alias参数后面的别名是你将来为应用签名时所需要用到的，所以记得记录这个别名。
 
-```
+```bash
 查看keystore参数信息：keytool -list -v -keystore my-release-key.keystore
 ```
 
@@ -31,7 +31,7 @@ $ keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keya
 
 **注意：~表示用户目录，比如windows上可能是C:\Users\用户名，而mac上可能是/Users/用户名。**
 
-```
+```bash
 MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
 MYAPP_RELEASE_KEY_ALIAS=my-key-alias
 MYAPP_RELEASE_STORE_PASSWORD=*****
@@ -50,7 +50,7 @@ MYAPP_RELEASE_KEY_PASSWORD=*****
 
 编辑你项目目录下的`android/app/build.gradle`，添加如下的签名配置：
 
-```
+```bash
 ...
 android {
     ...
@@ -77,7 +77,7 @@ android {
 
 只需在终端中运行以下命令：
 
-```
+```bash
 $ cd android && ./gradlew assembleRelease
 ```
 
@@ -91,7 +91,7 @@ Gradle的`assembleRelease`参数会把所有用到的JavaScript代码都打包�
 
 在把发行版本提交到Play Store之前，你应该做一次最终测试。输入以下命令可以在设备上安装发行版本：
 
-```
+```bash
 $ cd android && ./gradlew installRelease
 ```
 
@@ -105,14 +105,14 @@ $ cd android && ./gradlew installRelease
 
 你可以在`android/app/build.gradle`:修改如下代码来打包生成针对不同CPU架构的APK
 
-```
+```bash
 - def enableSeparateBuildPerCPUArchitecture = false
 + def enableSeparateBuildPerCPUArchitecture = true
 ```
 
 你可以把这上面打包生成的两个APK都上传到支持对用户设备CPU架构定位的应用程序商店，例如Google Play和Amazon AppStore，用户将自动获得相应的APK。如果您想上传到其他市场，例如APKFiles（不支持一个应用有多个APK文件），可以修改下面的代码，来生成适用不同CPU架构的通用APK。
 
-```
+```bash
 - universalApk false  
 + universalApk true  // 设置为true的时候会再生成一个通用APK
 ```
@@ -125,13 +125,13 @@ Proguard是一个减小APK的大小的工具，它通过移除掉React Native Ja
 
 在`android/app/build.gradle`文件中修改如下代码来启用Proguard
 
-```
+```bash
 - def enableProguardInReleaseBuilds = false 
 + def enableProguardInReleaseBuilds = true
 ```
 
 > 启动Proguard后需清空缓存，否则可能会报错：
 
-```
+```bash
 cd android && ./gradlew.bat clean
 ```

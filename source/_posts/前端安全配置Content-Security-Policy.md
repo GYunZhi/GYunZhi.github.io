@@ -34,7 +34,7 @@ categories: Web安全
 
 注意：**default src** 用来设置上面各个选项的默认值：
 
-```
+```bash
 Content-Security-Policy: default-src 'self'
 ```
 
@@ -46,7 +46,7 @@ Content-Security-Policy: default-src 'self'
 
 ​	有时，我们不仅希望防止 XSS，还希望记录此类行为。`report-uri`就用来告诉浏览器，应该把注入行为报告给哪个网址。
 
-```
+```bash
 Content-Security-Policy: default-src 'self'; ...; report-uri /csp_report_url;
 ```
 
@@ -54,7 +54,7 @@ Content-Security-Policy: default-src 'self'; ...; report-uri /csp_report_url;
 
 浏览器会使用`POST`方法，发送一个JSON对象，下面是一个例子：
 
-```
+```json
 {
   "csp-report": {
     "document-uri": "http://example.org/page.html",
@@ -90,7 +90,7 @@ hash值：列出允许执行的脚本代码的Hash值，页面内嵌脚本的哈
 
 1、通过meta标签启用CSP：
 
-```
+```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'none'; style-src cdn.example.org third-party.org; child-src https:">
 ```
 
@@ -108,7 +108,7 @@ hash值：列出允许执行的脚本代码的Hash值，页面内嵌脚本的哈
 
   在VirtualHost的httpd.conf文件中添加如下代码
 
-```
+```bash
 Header set Content-Security-Policy "default-src 'self';"
 ```
 
@@ -116,7 +116,7 @@ Header set Content-Security-Policy "default-src 'self';"
 
   在 server 对象块中添加如下代码
 
-```
+```nginx
 add_header Content-Security-Policy "default-src 'self';"
 ```
 

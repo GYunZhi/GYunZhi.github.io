@@ -12,7 +12,7 @@ categories: React-Native
 
 #### 1. 在AndroidManifest.xml激活App links
 
-```
+```bash
 <intent-filter android:autoVerify="true"> <!--App Links启动-->
 	<action android:name="android.intent.action.VIEW"></action>
    <category android:name="android.intent.category.DEFAULT"></category>  
@@ -28,7 +28,7 @@ categories: React-Native
 
 基于安全的原因，这个文件必须通过SSL的GET请求获得，所以你需要下载一个SSL证书，并且配置在你的服务器中，然后你可以打开一个文本编辑器，写入如下形式的JSON：
 
-```
+```bash
 [{  
   "relation": ["delegate_permission/common.handle_all_urls"], 
   "target": { 
@@ -41,7 +41,7 @@ categories: React-Native
 
 你可以在AndroidManifest.xml 文件中找到app的package name。你还需要通过在终端中执行以下命令查看keystore参数信息来找到sha256指纹(关于生成签名密钥，你可以看下我之前的文章)：
 
-```
+```bash
 keytool -list -v -keystore my-release-key.keystore
 ```
 
