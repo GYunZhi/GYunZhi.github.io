@@ -6,7 +6,7 @@ tags: Express
 categories: Express
 ---
 
-Connect 是一个可扩展(中间件作为插件)的 Http 服务器框架，Connect 刚出道之时自带了许多中间件，为保证其框架的轻量级以及扩展性，最终还是将这些中间件的实现抛给了社区。可能在搜索 Connect 的相关项目时，你会发现 `connect().use(connect.bodyParser())`这些的写法，这对于现在的 Connect (最新版本3.6.0) 是不支持的，而只能通过 npm 下载第三方的模块 (如 body-parser) 替代原先的中间价。
+[Connect](https://github.com/senchalabs/connect) 是一个可扩展(中间件作为插件)的 Http 服务器框架，Connect 刚出道之时自带了许多中间件，为保证其框架的轻量级以及扩展性，最终还是将这些中间件的实现抛给了社区。可能在搜索 Connect 的相关项目时，你会发现 `connect().use(connect.bodyParser())`这些的写法，这对于现在的 Connect (最新版本3.6.0) 是不支持的，而只能通过 npm 下载第三方的模块 (如 body-parser) 替代原先的中间价。
 
 ### 基本使用
 
@@ -17,8 +17,13 @@ var http = require('http');
 
 var app = connect()
 
-app.use('/user', function(req, res, next) {
-  next()
+app.use('/', function(req, res, next) {
+  res.writeHead(200,'OK',{
+    //'content-type': 'text/plain' //纯文本
+    'content-type': 'text/html;charset=utf-8'
+  })
+  res.write('<h1>你好，欢迎学习connect</h1>')
+  res.end()
 })
 
 // catch 404 and forward to error handler
@@ -33,14 +38,14 @@ app.use(function(err, req, res, next) {
 });
 
 // 两种方式监听指定端口
-app.listen(3000);
+app.listen(3000) // 这种方式在connect里面调用了http.createServer方法
 
 // http.createServer(app).listen(3000);
 ```
 
 ### 源码分析
 
-这边文章是基于`"version": "3.6.6"`这个版本来对源码进行分析的，这个版本所有的代码都在`index.js`文件中。下面我们来看一下connect是怎么工作的。
+这篇文章是基于`"version": "3.6.6"`这个版本来对源码进行分析的，这个版本所有的代码都在`index.js`文件中。下面我们来看一下connect是怎么工作的。
 
 首先我们看一下这个文件的模块出口，可以看到导出了一个`createServer`函数，这个函数最终返回的是app，app本身是一个函数，在下面一段代码中我们可以的看到它是作为了request事件的处理函数。同时它既继承了proto、EventEmitter属性和方法，也有自己的route、stack属性。
 
@@ -190,7 +195,7 @@ proto.handle = function handle(req, res, out) {
 };
 ```
 
-call方法:：执行handler中匹配到的中间件
+**call方法:：执行handler中匹配到的中间件**
 
 ```javascript
 function call(handle, route, err, req, res, next) {
