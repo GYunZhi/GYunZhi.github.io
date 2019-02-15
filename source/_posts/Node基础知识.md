@@ -604,7 +604,7 @@ process.stdin.on('data',function (chunk){
   // 加载一个http模块
   var http = require('http');
 
-  （1） 通过http，模块下的createServer创建并返回一个http服务器对象 
+  （1） 通过http模块下的 createServer 创建并返回一个http服务器对象 
       	http.createServer([requestListener])
       	requestListener : 监听到客户端连接的回调函数(request事件的回调函数，也可以采用下面的写法)
       	
