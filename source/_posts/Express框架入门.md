@@ -6,9 +6,119 @@ tags: Express
 categories: Express
 ---
 
-示例代码： https://gitee.com/gongyz/expess_app.git
+### Express 简介
 
-### [Express](http://www.expressjs.com.cn/)的安装使用
+[Express](http://www.expressjs.com.cn)是一基于Node的一个框架，用来快速创建Web服务的一个工具，为什么要使用Express呢，因为创建Web服务如果从Node开始有很多繁琐的工作要做，而Express为你解放了很多工作，从而让你更加关注于逻辑业务开发。举个例子：
+
+创建一个很简单的网站：
+
+1. 使用Node来开发：
+
+```javascript
+var http = require('http');
+
+http.createServer(function(req, res) {
+    res.writeHead(200, {
+        'Content-Type': 'text/plain'
+    });
+    res.end('Hello World')
+}).listen(3000)
+```
+
+这是一个简单的 Hello World，但实际上真正的网站要比这个复杂很多，主要有：
+
+（1） 多个页面的路由功能
+
+（2） 对请求的逻辑处理
+
+那么使用node原生写法就要进行以下处理
+
+```javascript
+var http = require('http')
+var url = require('url')
+
+var app = http.createServer(function (req, rep) {
+  //req.url: 访问路径
+  var urlObj = url.parse(req.url);
+  switch (urlObj.pathname) {
+    case '/':
+      //首页
+      rep.writeHead(200, {
+        'content-type': 'text/html;charset=utf-8'
+      })
+      rep.end('<h1>这是首页</h1>');
+      break;
+    case '/user':
+      //个人中心
+      rep.writeHead(200, {
+        'content-type': 'text/html;charset=utf-8'
+      })
+      rep.end('<h1>这是个人中心</h1>');
+      break;
+     default:
+     //处理其他情况
+     rep.writeHead(404, {
+        'content-type': 'text/html;charset=utf-8'
+     })
+     rep.end('<h1>页面不见了</h1>');
+     break;
+  }
+})
+
+app.listen(3000, 'localhost')
+```
+
+代码里在createServer函数里传递一个回调函数用来处理http请求并返回结果，在这个函数里有两个工作要做：
+
+（1）路由分析，对于不同的路径需要进行分别处理
+
+（2）逻辑处理和返回，对某个路径进行特别的逻辑处理
+
+如果一个大型网站拥有海量的页面，每个页面的处理逻辑也是交错复杂，那这里的写法会非常混乱，没法维护，为了解决这个问题，TJ提出了Connect的概念，把Java里面的中间件概念第一次进入到JS的世界，Web请求将一个一个经过中间件，并通过其中一个中间件返回，大大提高了代码的可维护性和开发效率。
+
+```javascript
+// 引入connect模块
+var connect = require("connect");
+var http = require("http");
+ 
+// 建立app
+var app = connect();
+ 
+// 添加中间件
+app.use(function(request, response) {
+    response.writeHead(200, { "Content-Type": "text/plain" });
+    response.end("Hello world!");
+});
+
+启动应用 http.createServer(app).listen(3000);
+```
+
+但是TJ认为还应该更好一点，于是Express诞生了，通过Express开发以上的例子：
+
+2. 使用Express来开发：
+
+```javascript
+var express = require('express');
+var app = express();
+
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
+
+app.get('/about', function (req, res) {
+  res.send('About');
+});
+
+var server = app.listen(3000, function () { 
+  var host = server.address().address; 
+  var port = server.address().port; 
+  console.log('Example app listening at http://%s:%s', host, port); 
+});
+```
+
+从Express例子可以看出，使用Express大大减少了代码，而且逻辑更为简洁，所以使用Express可以提高开发效率并降低项目维护成本。
+
+### Express 安装使用
 
 1.手动安装
 
@@ -46,13 +156,59 @@ npm start || node ./bin/www
 
 ### Express 源码结构
 
+在 Express4.x 的版本中，已经移除了connect模块，Express内部自己实现了connect的模块，并进行的一些增强处理。这里对Express 源码进行一些简单的说明。
+
+首先我们看一下Express的源码结构：
+
+![mark](http://img.gongyz.cn/blog/20190228/L86HlXsRhwYH.png?imageslim)
+
+```
+#Middleware:中间件
+
+init.js 初始化request，response
+
+query.js 格式化url，将url中的rquest参数剥离, 储存到req.query中
+
+#Router:路由相关
+
+index.js  Router类，用于存储中间件数组
+
+layer.js  中间件实体类
+
+route.js  Route类，用于处理不同Method
+
+Application.js 对外API
+
+Express.js 入口
+
+Request.js 请求增强
+
+Response.js 返回增强
+
+Utils.js 工具函数
+
+View.js 模版相关
+```
+
+Express中的中间件和connect中不太一样，因为Express有两种中间件，**普通中间件、路由中间件**。
+
+![mark](http://img.gongyz.cn/blog/20190228/rDIlTM3D79hu.png?imageslim)
+
+**router对象的主要作用是创建一个普通中间件或者路由中间件然后将其保存到自己的stack数组中去。**
+
+**route对象的主要作用是创建一个路由中间件，并且创建多个方法的layer保存到自己的stack数组中去。**
+
 ### Express 运行原理
 
 ![mark](http://img.gongyz.cn/blog/181030/gJbi318Jci.png)
 
-### 路由
+### Express使用
 
-#### 1、创建路由对象
+示例代码： https://gitee.com/gongyz/expess_app.git
+
+#### 路由
+
+##### 1、创建路由对象
 
 ```javascript
 // 默认路由配置
@@ -96,7 +252,7 @@ router.get('/test', function (req, rep, next) {
 })
 ```
 
-#### 2、路由适配器快捷写法
+##### 2、路由适配器快捷写法
 
 ```javascript
 var router = express.Router()
@@ -116,7 +272,7 @@ router.route('/test').get(function (req, res, next) {
 })
 ```
 
-#### 3、路由参数处理器
+##### 3、路由参数处理器
 
 ```javascript
 // 普通写法对请求参数进行处理
@@ -164,7 +320,7 @@ app.get('/user/:id/:name', function (req, res, next) {
 // router.param用法和app.param一样，不同的是router.param不支持['id', 'name']接收参数
 ```
 
-#### 4、路由处理器链
+##### 4、路由处理器链
 
 ```javascript
 //  基本用法
@@ -205,7 +361,7 @@ app.get('/user/:id', function (req, res, next) {db.getUserById(req, res, next)},
   }
 )
 ```
-#### 5、use与http动词方法的区别
+##### 5、use与http动词方法的区别
 
 ```javascript
 /**
@@ -235,7 +391,7 @@ app.get('/index', function (req,res) {
 })
 ```
 
-#### 6、路由路径模式
+##### 6、路由路径模式
 
 ```javascript
 // /abc?d  0次或1次
@@ -251,7 +407,7 @@ app.get(/\/ab[1,2]\/cd/,function (req,res,next) {
 })
 ```
 
-#### 7、静态资源访问
+##### 7、静态资源访问
 
 ```javascript
 // app.use(express.static(path.join(__dirname, 'public')));
@@ -263,9 +419,9 @@ app.use(express.static('public', {
 app.use(express.static('static'))
 ```
 
-### 获取客户端请求数据
+#### 获取客户端请求数据
 
-#### 1、获取URL数据
+##### 1、获取URL数据
 
 ```javascript
 app.get('/index/:id', function (req,res,next) {
@@ -283,7 +439,7 @@ app.get('/index/:id', function (req,res,next) {
 })
 ```
 
-#### 2、获取请求头数据
+##### 2、获取请求头数据
 
 ```javascript
 // app.get('/index', function (req,res) {
@@ -340,7 +496,7 @@ app.get('/test/ajax', function (req,res) {
 }) 
 ```
 
-#### 3、获取主体信息
+##### 3、获取主体信息
 
 ```javascript
 // 引入body-parse模块，express支持json、urlencoded方法
@@ -363,9 +519,7 @@ app.post('/submit', function (req,res) {
 })
 ```
 
-
-
-#### 4、获取文件上传数据
+##### 4、获取文件上传数据
 
 ```javascript
 /**
@@ -433,9 +587,9 @@ app.post('/upload', function (req,res) {
 })
 ```
 
-### 响应
+#### 响应
 
-#### 1、基本方式的响应
+##### 1、基本方式的响应
 
 ```javascript
 /**
@@ -489,7 +643,7 @@ app.get('/file/:name', function (req, res, next) {
 })
 ```
 
-#### 2、动态页面渲染
+##### 2、动态页面渲染
 
 ```javascript
 // view engine setup
@@ -524,7 +678,7 @@ router.get('/',db.getData,function(req, res, next) {
 });
 ```
 
-### Cookie & Session
+#### Cookie & Session
 
 ```javascript
 /**

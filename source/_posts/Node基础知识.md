@@ -6,8 +6,6 @@ tags: Node
 categories: Node
 ---
 
-示例代码：https://gitee.com/gongyz/NodeJs.git
-
 ## module - 模块
 
 ### 概述
