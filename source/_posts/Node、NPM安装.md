@@ -58,7 +58,7 @@ nvm install 8.11.3 32 // 32位操作系统需指定arch值，声明系统架构�
 ```bash
 nvm list  // 查看已经安装的node
 	8.11.3
-  10.12.0
+    10.12.0
   
 nvm use 8.11.3 // 使用指定版本的node
 	Now using node v8.11.3 (64-bit)
@@ -77,11 +77,11 @@ npm config set disturl https://npm.taobao.org/dist
 
 设置完成之后可以在`C:\Users\Administrator\.npmrc`目录下查看到刚才的配置
 
-我们知道npm安装的依赖可以是全局的，也可以是局部的，局部的模块是安装在项目中的的`node_modules`中。全局安装的模块有一些不同，可以通过`**npm config set prefix**` 查看全局模块安装的位置：
+我们知道npm安装的依赖可以是全局的，也可以是局部的，局部的模块是安装在项目中的的`node_modules`中。全局安装的模块有一些不同，可以通过`**npm config get prefix**` 查看全局模块安装的位置：
 
 ```bash
 （1）通过官网下载安装的node 
-	npm config get prefix
+  npm config get prefix
   C:\Users\Administrator\AppData\Roaming\npm // 默认位置
 
 （2）通过nvm安装的node
@@ -101,8 +101,9 @@ C:\Users\Administrator\AppData\Roaming\npm-cache
 ```bash
 npm config set prefix 'C:\Program Files\nodejs\node_global'
 npm config set cache 'C:\Program Files\nodejs\node_cache'
+
 // 安装完成之后需配置环境变量
-NODE_PATH"，输入'C:\Program Files\nodejs\node_global\'
+Path "，输入'C:\Program Files\nodejs\node_global'
 ```
 
 安装yarn，我个人习惯使用yarn，所以在配置好npm后会先下载yarn，并且配置镜像源
@@ -119,4 +120,5 @@ yarn global dir
 C:\Users\Administrator\AppData\Local\Yarn\Data\global
 ```
 
-注意事项：个人建议先安装node，在安装nvm，然后然nvm自动管理已经安装好的node，因为卸载node，通过nvm去安装时，全局模块安装的默认位置在`C:\Program Files\nodejs`，这个时候需要我们去修改手动修改全局模块和缓存目录，其次不能使用yarn去安装全局模块，因为在windows下yarn安装的全局模块路径和我们npm全局模块路径重复了，原因目前暂时不知道。
+注意事项：个人建议先安装node，在安装nvm，然后然nvm自动管理已经安装好的node，因为卸载node，通过nvm去安装时，全局模块安装的默认位置在`C:\Program Files\nodejs`，这个时候需要我们去修改手动修改全局模块和缓存目录，其次不能使用yarn去安装全局模块，原因目前暂时不知道。
+
