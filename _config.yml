@@ -80,7 +80,7 @@ theme: BlueLake
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:GYunZhi/GYunZhi.github.io.git
+  repo: https://github.com/GYunZhi/GYunZhi.github.io.git
   # repo: https://gitee.com/gongyz/gongyz.git
   branch: master
 
