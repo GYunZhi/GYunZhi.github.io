@@ -13,15 +13,21 @@ yum install git         安装git （git clone ...） 静态文放在/usr/src/bl
 
 ```bash
 systemctl enable nginx  系统启动时运行nginx
+# centos6.x
 service nginx start     启动nginx服务
 service nginx stop	    停止nginx服务
 service nginx reload    重启nginx服务
+
+# centos7.x
+systemctl start  nginx   启动nginx服务
+systemctl stop	nginx    停止nginx服务
+systemctl reload nginx    重启nginx服务
 ```
 
 ```bash
 pwd                     查看当前目录
 ll/dir                  查看目录下文件和文件夹
-mv 文件名 新文件名       修改文件夹名称
+mv 文件名 新文件名        修改文件名称
 vi nginx.conf           编辑文件
 ```
 
