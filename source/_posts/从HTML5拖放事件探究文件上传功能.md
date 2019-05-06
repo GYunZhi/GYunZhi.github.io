@@ -300,7 +300,7 @@ window.onload=function (){
 
 ### File和FileReader对象
 
-File是一个是特殊类型的Blob对象，保存了和文件有关的信息。File 对象可以是来自用户在一个<input>元素上选择文件后返回的`FileList`对象,也可以是来自由拖放操作生成的`DataTransfer`对象中的`files`属性，这个属性就是一个类数组的`FileList`对象。
+File是一个是特殊类型的Blob对象，保存了和文件有关的信息。File 对象可以是来自用户在一个`<input>`元素上选择文件后返回的`FileList`对象,也可以是来自由拖放操作生成的`DataTransfer`对象中的`files`属性，这个属性就是一个类数组的`FileList`对象。
 
 FileReader 用来读取通过`dataTransfer`对象的`files`属性获取的外部文件 ，将文件读取为Data URL格式,读取的结果保存在result属性中，如果是图片，返回base64格式的图片数据 。
 
@@ -322,11 +322,11 @@ window.onload=function (){
 	/*
 		fileReader对象  用来读取通过dataTransfer对象的files属性获取的文件
 		
-		var fd=new FileReader();
+		var fd = new FileReader();
 		
 		readAsDataURL()方法   参数为要读取的文件对象，将文件读取为DataURL格式
 		
-		onload事件  				 当读取文件完成的时候触发此事件
+		onload事件  			当读取文件完成的时候触发此事件
 		
 		fd.result            取读取的文件数据，如果是图片，返回base64格式的图片数据
 	*/

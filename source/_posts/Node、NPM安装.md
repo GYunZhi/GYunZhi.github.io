@@ -121,4 +121,3 @@ C:\Users\Administrator\AppData\Local\Yarn\Data\global
 ```
 
 注意事项：个人建议先安装node，在安装nvm，然后然nvm自动管理已经安装好的node，因为卸载node，通过nvm去安装时，全局模块安装的默认位置在`C:\Program Files\nodejs`，这个时候需要我们去修改手动修改全局模块和缓存目录，其次不能使用yarn去安装全局模块，原因目前暂时不知道。
-

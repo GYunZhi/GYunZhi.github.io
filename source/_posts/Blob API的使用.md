@@ -10,7 +10,7 @@ categories: JavaScript
 
 ## Blob基本用法
 
-### 创建
+### 创建Blob对象
 
 可以通过Blob的构造函数创建Blob对象：
 
