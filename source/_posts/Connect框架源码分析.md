@@ -140,6 +140,7 @@ proto.handle = function handle(req, res, out) {
   // store the original URL
   req.originalUrl = req.originalUrl || req.url;
 
+  // 调用next方法传递的err信息，可以在下一个中间件处理函数的err参数中获取到
   function next(err) {
     if (slashAdded) {
       req.url = req.url.substr(1);
@@ -163,7 +164,7 @@ proto.handle = function handle(req, res, out) {
     // route data
     var path = parseUrl(req).pathname || '/';
     var route = layer.route;
-
+      
     // skip this layer if the route doesn't match
     if (path.toLowerCase().substr(0, route.length) !== route.toLowerCase()) {
       return next(err);

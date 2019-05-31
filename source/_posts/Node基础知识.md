@@ -521,7 +521,7 @@ process.stdin.on('data',function (chunk){
    fs.unlink(path, callback)  删除一个文件
    fs.rename(oldPath, newPath, callback)  重命名
    fs.stat(path, callback) 读取文件信息
-  fs.watch(filename, [options], [listener]) 监控文件的修改
+   fs.watch(filename, [options], [listener]) 监控文件的修改
 
    var fs = require('fs');
    var filename = __dirname + '/' + '2.txt';
@@ -630,31 +630,31 @@ process.stdin.on('data',function (chunk){
   })
  
  (5) request事件: 当有客户端发送请求的时候触发
-      参数：
-       req对象 ：通过它我们可以获取到这次请求的一些信息，比如头信息，数据等    
-       rep对象 ：通过他我们可以向该次请求的客户端输出返回响应
+     参数：
+      req对象 ：通过它我们可以获取到这次请求的一些信息，比如头信息，数据等    
+      res对象 ：通过他我们可以向该次请求的客户端输出返回响应
        
-  req对象:    
-  httpVersion : 使用的http协议的版本
-  headers : 请求头信息中的数据
-  url : 请求的地址
-  method : 请求方式
+      req对象:    
+      httpVersion : 使用的http协议的版本
+      headers : 请求头信息中的数据
+      url : 请求的地址
+      method : 请求方式
 
-  rep对象 
-  write(chunk, [encoding]) : 发送一个数据块到响应正文中
-  end([chunk], [encoding]) : 当所有的正文和头信息发送完成以后调用该方法告诉服务器数据已经全部发送完成了，这个方法在每次完成信息发送以后必须调用，并且是最后调用
-  statusCode : 该属性用来设置返回的状态码
-  setHeader(name, value) : 设置返回头信息
-  writeHead(statusCode, [reasonPhrase], [headers]) : 这个方法只能在当前请求中使用一次，并且必须在response.end()之前调用
+      res对象 
+      write(chunk, [encoding]) : 发送一个数据块到响应正文中
+      end([chunk], [encoding]) : 当所有的正文和头信息发送完成以后调用该方法告诉服务器数据已经全部发送完成了，这个方法在每次完成信息发送以后必须调用，并且是最后调用
+      statusCode : 该属性用来设置返回的状态码
+      setHeader(name, value) : 设置返回头信息
+      writeHead(statusCode, [reasonPhrase], [headers]) : 这个方法只能在当前请求中使用一次，并且必须在response.end()之前调用
 
-  server.on('request',function (req,rep){
+  server.on('request',function (req,res){
     console.log('有用户连接进来了');
-    rep.writeHead(200,'OK',{
+    res.writeHead(200,'OK',{
       //'content-type':'text/plain',//纯文本
       'content-type':'text/html;charset=utf-8'
     });
-    rep.write('<h1>你好，欢迎学习node</h1>');
-    rep.end(); // 当所有的正文和头信息发送完成以后调用该方法告诉服务器数据已经全部发送完成了
+    res.write('<h1>你好，欢迎学习node</h1>');
+    res.end(); // 当所有的正文和头信息发送完成以后调用该方法告诉服务器数据已经全部发送完成了
   })
 ```
 
@@ -669,7 +669,7 @@ var http = require('http');
 var url = require('url');
  
 (1)url.parse(request.url): 对url格式的字符串进行解析，返回一个对象,不同的url处理之后返回的数据是不同的 
-var urlObj = url.parse('http://www.baidu.com:8080/a/index.html?b=2#p=1')
+var urlObj = url.parse('http://www.baidu.com:8080/a/b?age=23&name=jack#p=1')
 console.log(urlObj);
 
 (2)利用url模块处理request.url，对于不同的pathname(路径),返回不同的数据,即做出不同的响应
@@ -677,31 +677,31 @@ console.log(urlObj);
 var server = http.createServer();
 server.listen(8080, 'localhost');
 
-server.on('request', function (req, rep) {
+server.on('request', function (req, res) {
   //req.url: 访问路径
   //console.log(req.url);
   var urlObj = url.parse(req.url);
   switch (urlObj.pathname) {
     case '/':
       //首页
-      rep.writeHead(200, {
+      res.writeHead(200, {
         'content-type': 'text/html;charset=utf-8'
       })
-      rep.end('<h1>这是首页</h1>');
+      res.end('<h1>这是首页</h1>');
       break;
     case '/user':
       //个人中心
-      rep.writeHead(200, {
+      res.writeHead(200, {
         'content-type': 'text/html;charset=utf-8'
       })
-      rep.end('<h1>这是个人中心</h1>');
+      res.end('<h1>这是个人中心</h1>');
       break;
      default:
      //处理其他情况
-     rep.writeHead(404, {
+     res.writeHead(404, {
         'content-type': 'text/html;charset=utf-8'
      })
-     rep.end('<h1>页面不见了</h1>');
+     res.end('<h1>页面不见了</h1>');
      break;
   }
 })
@@ -712,11 +712,11 @@ server.on('request', function (req, rep) {
 ```javascript
   使用fs模块实现nodejs代码和html的分离
  	queryString模块  对get和和post方法提交的数据进行处理
-  queryString.parse() : 将一个 querystring 反序列化为一个对象
+  	queryString.parse() : 将一个 querystring 反序列化为一个对象
 
-  var http = require('http');
-  var url = require('url');
-  var fs = require('fs');
+    var http = require('http');
+    var url = require('url');
+    var fs = require('fs');
 
    通过req.method 拿到请求的方法
    (1) get请求的数据处理 ：get请求的数据在querystring中，通过url.parse解析之后可以存放在query属性中。 qs.parse(urlObj.query)
@@ -730,20 +730,20 @@ var server = http.createServer();
 
 var HtmlDir = __dirname + '/html';
 server.listen(8080, 'localhost');
-server.on('request', function (req, rep) {
+server.on('request', function (req, res) {
   var urlObj = url.parse(req.url);
   switch (urlObj.pathname) {
     case '/':
       // 首页
-      sendData(HtmlDir + '/index.html', req, rep);
+      sendData(HtmlDir + '/index.html', req, res);
       break;
     case '/user':
       // 个人中心
-      sendData(HtmlDir + '/user.html', req, rep);
+      sendData(HtmlDir + '/user.html', req, res);
       break;
     case '/login':
       // 登录页面
-      sendData(HtmlDir + '/login.html', req, rep);
+      sendData(HtmlDir + '/login.html', req, res);
       break;
     case '/login/check':
       // 登录验证
@@ -767,18 +767,18 @@ server.on('request', function (req, rep) {
   }
 })
 
-function sendData(file, req, rep) {
+function sendData(file, req, res) {
   fs.readFile(file, function (err, data) {
     if (err) {
-      rep.writeHead(404, {
+      res.writeHead(404, {
         'content-type': 'text/html;charset=utf-8'
       })
-      rep.end('<h1>页面不见了......</h1>');
+      res.end('<h1>页面不见了......</h1>');
     } else {
-      rep.writeHead(200, {
+      res.writeHead(200, {
         'content-type': 'text/html;charset=utf-8'
       })
-      rep.end(data);
+      res.end(data);
     }
   })
 }
