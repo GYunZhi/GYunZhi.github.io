@@ -77,7 +77,7 @@ npm config set disturl https://npm.taobao.org/dist
 
 设置完成之后可以在`C:\Users\Administrator\.npmrc`目录下查看到刚才的配置
 
-我们知道npm安装的依赖可以是全局的，也可以是局部的，局部的模块是安装在项目中的的`node_modules`中。全局安装的模块有一些不同，可以通过`**npm config get prefix**` 查看全局模块安装的位置：
+我们知道npm安装的依赖可以是全局的，也可以是局部的，局部的模块是安装在项目中的的`node_modules`中。全局安装的模块有一些不同，可以通过`npm config get prefix` 查看全局模块安装的位置：
 
 ```bash
 （1）通过官网下载安装的node 
