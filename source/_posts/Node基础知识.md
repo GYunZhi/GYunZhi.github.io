@@ -720,7 +720,7 @@ server.on('request', function (req, res) {
 
    通过req.method 拿到请求的方法
    (1) get请求的数据处理 ：get请求的数据在querystring中，通过url.parse解析之后可以存放在query属性中。 qs.parse(urlObj.query)
-   (2) post请求的数据处理 : post发送的数据会被写入缓冲区中(buffer)，需要通过resquest的data事件和end事件来进行数据拼接处理
+   (2) post请求的数据处理 : post发送的数据会被写入缓冲区中(buffer)，需要通过resquest的data和end事件来获取数据，并且用 + 进行字符串拼接或者 chunk.toString()，对chunk进行字符串转换。
 
 
 var qs = require('querystring');
