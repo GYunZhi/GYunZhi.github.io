@@ -262,7 +262,7 @@ Data URL对大家来说应该并不陌生，Web性能优化中有一项措施：
 
 那么Blob URL和Data URL有什么区别呢？
 
-1. Blob URL的长度一般比较短，但Data URL因为直接存储图片base64编码后的数据，往往很长，如上图所示，浏览器在显示Data URL时使用了省略号（…）。当显式大图片时，使用Blob URL能获取更好的可能性。
+1. Blob URL的长度一般比较短，但Data URL因为直接存储图片base64编码后的数据，往往很长，如上图所示，浏览器在显示Data URL时使用了省略号（…）。当显式大图片时，使用Blob URL能获取更好的可读性。
 2. Blob URL可以方便的使用XMLHttpRequest获取源数据，例如：
 
 ```javascript
