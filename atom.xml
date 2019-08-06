@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://gyunzhi.github.io/"/>
+  <link href="https://gongyz.gitee.io/"/>
   <updated>2019-07-11T13:04:07.940Z</updated>
-  <id>https://gyunzhi.github.io/</id>
+  <id>https://gongyz.gitee.io/</id>
   
   <author>
     <name>GYunZhi</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Express框架入门</title>
-    <link href="https://gyunzhi.github.io/2018/12/09/Express%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8/"/>
-    <id>https://gyunzhi.github.io/2018/12/09/Express框架入门/</id>
+    <link href="https://gongyz.gitee.io/2018/12/09/Express%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8/"/>
+    <id>https://gongyz.gitee.io/2018/12/09/Express框架入门/</id>
     <published>2018-12-08T20:16:56.000Z</published>
     <updated>2019-07-11T13:04:07.940Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="Express" scheme="https://gyunzhi.github.io/categories/Express/"/>
+      <category term="Express" scheme="https://gongyz.gitee.io/categories/Express/"/>
     
     
-      <category term="Express" scheme="https://gyunzhi.github.io/tags/Express/"/>
+      <category term="Express" scheme="https://gongyz.gitee.io/tags/Express/"/>
     
   </entry>
   
   <entry>
     <title>Connect框架源码分析</title>
-    <link href="https://gyunzhi.github.io/2018/11/11/Connect%E6%A1%86%E6%9E%B6%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
-    <id>https://gyunzhi.github.io/2018/11/11/Connect框架源码分析/</id>
+    <link href="https://gongyz.gitee.io/2018/11/11/Connect%E6%A1%86%E6%9E%B6%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    <id>https://gongyz.gitee.io/2018/11/11/Connect框架源码分析/</id>
     <published>2018-11-10T19:26:32.000Z</published>
     <updated>2019-05-31T03:01:39.707Z</updated>
     
@@ -59,17 +59,17 @@
     
     </summary>
     
-      <category term="Express" scheme="https://gyunzhi.github.io/categories/Express/"/>
+      <category term="Express" scheme="https://gongyz.gitee.io/categories/Express/"/>
     
     
-      <category term="Express" scheme="https://gyunzhi.github.io/tags/Express/"/>
+      <category term="Express" scheme="https://gongyz.gitee.io/tags/Express/"/>
     
   </entry>
   
   <entry>
     <title>Node基础知识</title>
-    <link href="https://gyunzhi.github.io/2018/10/19/Node%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    <id>https://gyunzhi.github.io/2018/10/19/Node基础知识/</id>
+    <link href="https://gongyz.gitee.io/2018/10/19/Node%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>https://gongyz.gitee.io/2018/10/19/Node基础知识/</id>
     <published>2018-10-18T18:16:52.000Z</published>
     <updated>2019-07-06T04:41:50.554Z</updated>
     
@@ -84,17 +84,17 @@
     
     </summary>
     
-      <category term="Node" scheme="https://gyunzhi.github.io/categories/Node/"/>
+      <category term="Node" scheme="https://gongyz.gitee.io/categories/Node/"/>
     
     
-      <category term="Node" scheme="https://gyunzhi.github.io/tags/Node/"/>
+      <category term="Node" scheme="https://gongyz.gitee.io/tags/Node/"/>
     
   </entry>
   
   <entry>
     <title>Node、NPM安装</title>
-    <link href="https://gyunzhi.github.io/2018/10/06/Node%E3%80%81NPM%E5%AE%89%E8%A3%85/"/>
-    <id>https://gyunzhi.github.io/2018/10/06/Node、NPM安装/</id>
+    <link href="https://gongyz.gitee.io/2018/10/06/Node%E3%80%81NPM%E5%AE%89%E8%A3%85/"/>
+    <id>https://gongyz.gitee.io/2018/10/06/Node、NPM安装/</id>
     <published>2018-10-06T13:09:59.000Z</published>
     <updated>2019-07-11T13:13:31.495Z</updated>
     
@@ -109,17 +109,17 @@
     
     </summary>
     
-      <category term="Node" scheme="https://gyunzhi.github.io/categories/Node/"/>
+      <category term="Node" scheme="https://gongyz.gitee.io/categories/Node/"/>
     
     
-      <category term="Node" scheme="https://gyunzhi.github.io/tags/Node/"/>
+      <category term="Node" scheme="https://gongyz.gitee.io/tags/Node/"/>
     
   </entry>
   
   <entry>
     <title>Javascript异步编程的演进</title>
-    <link href="https://gyunzhi.github.io/2018/09/09/Javascript%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E7%9A%84%E6%BC%94%E8%BF%9B/"/>
-    <id>https://gyunzhi.github.io/2018/09/09/Javascript异步编程的演进/</id>
+    <link href="https://gongyz.gitee.io/2018/09/09/Javascript%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E7%9A%84%E6%BC%94%E8%BF%9B/"/>
+    <id>https://gongyz.gitee.io/2018/09/09/Javascript异步编程的演进/</id>
     <published>2018-09-09T13:12:56.000Z</published>
     <updated>2019-05-06T09:26:27.124Z</updated>
     
@@ -134,17 +134,17 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>ECMAScript 6</title>
-    <link href="https://gyunzhi.github.io/2018/08/27/ECMAScript%206/"/>
-    <id>https://gyunzhi.github.io/2018/08/27/ECMAScript 6/</id>
+    <link href="https://gongyz.gitee.io/2018/08/27/ECMAScript%206/"/>
+    <id>https://gongyz.gitee.io/2018/08/27/ECMAScript 6/</id>
     <published>2018-08-26T23:16:56.000Z</published>
     <updated>2019-05-06T09:26:27.117Z</updated>
     
@@ -159,17 +159,17 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Redux入门指南</title>
-    <link href="https://gyunzhi.github.io/2018/08/12/Redux%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"/>
-    <id>https://gyunzhi.github.io/2018/08/12/Redux入门指南/</id>
+    <link href="https://gongyz.gitee.io/2018/08/12/Redux%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"/>
+    <id>https://gongyz.gitee.io/2018/08/12/Redux入门指南/</id>
     <published>2018-08-12T10:28:56.000Z</published>
     <updated>2019-05-06T09:26:27.135Z</updated>
     
@@ -184,17 +184,17 @@
     
     </summary>
     
-      <category term="React" scheme="https://gyunzhi.github.io/categories/React/"/>
+      <category term="React" scheme="https://gongyz.gitee.io/categories/React/"/>
     
     
-      <category term="React" scheme="https://gyunzhi.github.io/tags/React/"/>
+      <category term="React" scheme="https://gongyz.gitee.io/tags/React/"/>
     
   </entry>
   
   <entry>
     <title>跨文档消息通信</title>
-    <link href="https://gyunzhi.github.io/2018/08/05/%E8%B7%A8%E6%96%87%E6%A1%A3%E6%B6%88%E6%81%AF%E9%80%9A%E4%BF%A1/"/>
-    <id>https://gyunzhi.github.io/2018/08/05/跨文档消息通信/</id>
+    <link href="https://gongyz.gitee.io/2018/08/05/%E8%B7%A8%E6%96%87%E6%A1%A3%E6%B6%88%E6%81%AF%E9%80%9A%E4%BF%A1/"/>
+    <id>https://gongyz.gitee.io/2018/08/05/跨文档消息通信/</id>
     <published>2018-08-05T10:28:56.000Z</published>
     <updated>2019-05-06T09:26:27.154Z</updated>
     
@@ -211,17 +211,17 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>事件探究</title>
-    <link href="https://gyunzhi.github.io/2018/07/21/%E4%BA%8B%E4%BB%B6%E6%8E%A2%E7%A9%B6/"/>
-    <id>https://gyunzhi.github.io/2018/07/21/事件探究/</id>
+    <link href="https://gongyz.gitee.io/2018/07/21/%E4%BA%8B%E4%BB%B6%E6%8E%A2%E7%A9%B6/"/>
+    <id>https://gongyz.gitee.io/2018/07/21/事件探究/</id>
     <published>2018-07-21T12:16:56.000Z</published>
     <updated>2019-05-06T09:26:27.136Z</updated>
     
@@ -236,17 +236,17 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Blob API的使用</title>
-    <link href="https://gyunzhi.github.io/2018/07/16/Blob%20API%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>https://gyunzhi.github.io/2018/07/16/Blob API的使用/</id>
+    <link href="https://gongyz.gitee.io/2018/07/16/Blob%20API%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>https://gongyz.gitee.io/2018/07/16/Blob API的使用/</id>
     <published>2018-07-15T20:16:56.000Z</published>
     <updated>2019-07-12T08:27:07.140Z</updated>
     
@@ -261,17 +261,17 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>从HTML5拖放事件探究文件上传功能</title>
-    <link href="https://gyunzhi.github.io/2018/07/15/%E4%BB%8EHTML5%E6%8B%96%E6%94%BE%E4%BA%8B%E4%BB%B6%E6%8E%A2%E7%A9%B6%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD/"/>
-    <id>https://gyunzhi.github.io/2018/07/15/从HTML5拖放事件探究文件上传功能/</id>
+    <link href="https://gongyz.gitee.io/2018/07/15/%E4%BB%8EHTML5%E6%8B%96%E6%94%BE%E4%BA%8B%E4%BB%B6%E6%8E%A2%E7%A9%B6%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD/"/>
+    <id>https://gongyz.gitee.io/2018/07/15/从HTML5拖放事件探究文件上传功能/</id>
     <published>2018-07-14T22:16:56.000Z</published>
     <updated>2019-05-06T09:26:27.146Z</updated>
     
@@ -286,17 +286,17 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>面向对象程序设计</title>
-    <link href="https://gyunzhi.github.io/2018/07/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
-    <id>https://gyunzhi.github.io/2018/07/08/面向对象程序设计/</id>
+    <link href="https://gongyz.gitee.io/2018/07/08/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://gongyz.gitee.io/2018/07/08/面向对象程序设计/</id>
     <published>2018-07-07T21:16:56.000Z</published>
     <updated>2019-05-06T09:26:27.155Z</updated>
     
@@ -311,17 +311,17 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Ajax基础和应用</title>
-    <link href="https://gyunzhi.github.io/2018/07/01/Ajax%E5%9F%BA%E7%A1%80%E5%92%8C%E5%BA%94%E7%94%A8/"/>
-    <id>https://gyunzhi.github.io/2018/07/01/Ajax基础和应用/</id>
+    <link href="https://gongyz.gitee.io/2018/07/01/Ajax%E5%9F%BA%E7%A1%80%E5%92%8C%E5%BA%94%E7%94%A8/"/>
+    <id>https://gongyz.gitee.io/2018/07/01/Ajax基础和应用/</id>
     <published>2018-06-30T18:16:52.000Z</published>
     <updated>2019-05-06T09:26:27.091Z</updated>
     
@@ -336,17 +336,17 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>闭包的应用</title>
-    <link href="https://gyunzhi.github.io/2018/06/30/%E9%97%AD%E5%8C%85%E7%9A%84%E5%BA%94%E7%94%A8/"/>
-    <id>https://gyunzhi.github.io/2018/06/30/闭包的应用/</id>
+    <link href="https://gongyz.gitee.io/2018/06/30/%E9%97%AD%E5%8C%85%E7%9A%84%E5%BA%94%E7%94%A8/"/>
+    <id>https://gongyz.gitee.io/2018/06/30/闭包的应用/</id>
     <published>2018-06-29T18:16:52.000Z</published>
     <updated>2019-05-06T09:26:27.154Z</updated>
     
@@ -361,17 +361,17 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="https://gyunzhi.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://gongyz.gitee.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>前端安全配置Content-Security-Policy</title>
-    <link href="https://gyunzhi.github.io/2018/06/16/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AEContent-Security-Policy/"/>
-    <id>https://gyunzhi.github.io/2018/06/16/前端安全配置Content-Security-Policy/</id>
+    <link href="https://gongyz.gitee.io/2018/06/16/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AEContent-Security-Policy/"/>
+    <id>https://gongyz.gitee.io/2018/06/16/前端安全配置Content-Security-Policy/</id>
     <published>2018-06-15T19:09:59.000Z</published>
     <updated>2019-05-06T09:26:27.146Z</updated>
     
@@ -386,17 +386,17 @@
     
     </summary>
     
-      <category term="Web安全" scheme="https://gyunzhi.github.io/categories/Web%E5%AE%89%E5%85%A8/"/>
+      <category term="Web安全" scheme="https://gongyz.gitee.io/categories/Web%E5%AE%89%E5%85%A8/"/>
     
     
-      <category term="Web安全" scheme="https://gyunzhi.github.io/tags/Web%E5%AE%89%E5%85%A8/"/>
+      <category term="Web安全" scheme="https://gongyz.gitee.io/tags/Web%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
   <entry>
     <title>App Links和Universal Links的配置和使用</title>
-    <link href="https://gyunzhi.github.io/2018/04/17/App%20Links%E5%92%8CUniversal%20Links%E7%9A%84%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
-    <id>https://gyunzhi.github.io/2018/04/17/App Links和Universal Links的配置和使用/</id>
+    <link href="https://gongyz.gitee.io/2018/04/17/App%20Links%E5%92%8CUniversal%20Links%E7%9A%84%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8/"/>
+    <id>https://gongyz.gitee.io/2018/04/17/App Links和Universal Links的配置和使用/</id>
     <published>2018-04-16T22:39:31.000Z</published>
     <updated>2019-05-06T09:26:27.094Z</updated>
     
@@ -411,17 +411,17 @@
     
     </summary>
     
-      <category term="React-Native" scheme="https://gyunzhi.github.io/categories/React-Native/"/>
+      <category term="React-Native" scheme="https://gongyz.gitee.io/categories/React-Native/"/>
     
     
-      <category term="React-Native" scheme="https://gyunzhi.github.io/tags/React-Native/"/>
+      <category term="React-Native" scheme="https://gongyz.gitee.io/tags/React-Native/"/>
     
   </entry>
   
   <entry>
     <title>浅析移动端深度链接技术</title>
-    <link href="https://gyunzhi.github.io/2018/03/30/%E6%B5%85%E6%9E%90%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%B7%B1%E5%BA%A6%E9%93%BE%E6%8E%A5%E6%8A%80%E6%9C%AF/"/>
-    <id>https://gyunzhi.github.io/2018/03/30/浅析移动端深度链接技术/</id>
+    <link href="https://gongyz.gitee.io/2018/03/30/%E6%B5%85%E6%9E%90%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%B7%B1%E5%BA%A6%E9%93%BE%E6%8E%A5%E6%8A%80%E6%9C%AF/"/>
+    <id>https://gongyz.gitee.io/2018/03/30/浅析移动端深度链接技术/</id>
     <published>2018-03-29T16:57:23.000Z</published>
     <updated>2019-05-06T09:26:27.153Z</updated>
     
@@ -436,17 +436,17 @@
     
     </summary>
     
-      <category term="React-Native" scheme="https://gyunzhi.github.io/categories/React-Native/"/>
+      <category term="React-Native" scheme="https://gongyz.gitee.io/categories/React-Native/"/>
     
     
-      <category term="React-Native" scheme="https://gyunzhi.github.io/tags/React-Native/"/>
+      <category term="React-Native" scheme="https://gongyz.gitee.io/tags/React-Native/"/>
     
   </entry>
   
   <entry>
     <title>Android环境生成签名密钥、打包APK</title>
-    <link href="https://gyunzhi.github.io/2018/02/26/Android%E7%8E%AF%E5%A2%83%E7%94%9F%E6%88%90%E7%AD%BE%E5%90%8D%E5%AF%86%E9%92%A5%E3%80%81%E6%89%93%E5%8C%85APK/"/>
-    <id>https://gyunzhi.github.io/2018/02/26/Android环境生成签名密钥、打包APK/</id>
+    <link href="https://gongyz.gitee.io/2018/02/26/Android%E7%8E%AF%E5%A2%83%E7%94%9F%E6%88%90%E7%AD%BE%E5%90%8D%E5%AF%86%E9%92%A5%E3%80%81%E6%89%93%E5%8C%85APK/"/>
+    <id>https://gongyz.gitee.io/2018/02/26/Android环境生成签名密钥、打包APK/</id>
     <published>2018-02-25T17:08:23.000Z</published>
     <updated>2019-05-06T09:26:27.091Z</updated>
     
@@ -461,17 +461,17 @@
     
     </summary>
     
-      <category term="React-Native" scheme="https://gyunzhi.github.io/categories/React-Native/"/>
+      <category term="React-Native" scheme="https://gongyz.gitee.io/categories/React-Native/"/>
     
     
-      <category term="React-Native" scheme="https://gyunzhi.github.io/tags/React-Native/"/>
+      <category term="React-Native" scheme="https://gongyz.gitee.io/tags/React-Native/"/>
     
   </entry>
   
   <entry>
     <title>CenterOS7部署静态博客</title>
-    <link href="https://gyunzhi.github.io/2018/02/20/CenterOS7%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://gyunzhi.github.io/2018/02/20/CenterOS7部署静态博客/</id>
+    <link href="https://gongyz.gitee.io/2018/02/20/CenterOS7%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://gongyz.gitee.io/2018/02/20/CenterOS7部署静态博客/</id>
     <published>2018-02-19T20:09:59.000Z</published>
     <updated>2019-05-06T09:26:27.116Z</updated>
     
@@ -486,17 +486,17 @@
     
     </summary>
     
-      <category term="服务器" scheme="https://gyunzhi.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="服务器" scheme="https://gongyz.gitee.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-      <category term="服务器" scheme="https://gyunzhi.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="服务器" scheme="https://gongyz.gitee.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>使用gulp对博文进行压缩</title>
-    <link href="https://gyunzhi.github.io/2018/02/15/%E4%BD%BF%E7%94%A8gulp%E5%AF%B9%E5%8D%9A%E6%96%87%E5%8E%8B%E7%BC%A9/"/>
-    <id>https://gyunzhi.github.io/2018/02/15/使用gulp对博文压缩/</id>
+    <link href="https://gongyz.gitee.io/2018/02/15/%E4%BD%BF%E7%94%A8gulp%E5%AF%B9%E5%8D%9A%E6%96%87%E5%8E%8B%E7%BC%A9/"/>
+    <id>https://gongyz.gitee.io/2018/02/15/使用gulp对博文压缩/</id>
     <published>2018-02-14T22:06:23.000Z</published>
     <updated>2019-05-06T09:26:27.146Z</updated>
     
@@ -512,10 +512,10 @@
     
     </summary>
     
-      <category term="Hexo" scheme="https://gyunzhi.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://gongyz.gitee.io/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="https://gyunzhi.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://gongyz.gitee.io/tags/Hexo/"/>
     
   </entry>
   
