@@ -110,9 +110,6 @@ about:
   - label: github
     url: 'https://github.com/GYunZhi' ## Your github'url e.g.  
     title: 'https://github.com/GYunZhi' ## Your github'name e.g.
-  - label: gitee
-    url: 'https://gitee.com/gongyz' ## Your gitee'url e.g.  
-    title: 'https://gitee.com/gongyz' ## Your gitee'name e.g.
   # - label: weibo
     # url: ## Your weibo's url e.g.  
     # title: ## Your weibo's name e.g.

@@ -180,7 +180,7 @@ Blob URL可以通过`URL.createObjectURL(blob)`创建。在绝大部分场景下
 
 点击下载按钮，浏览器将会下载一个名为file的文件，文件的内容是：Blob Data。通过Blob对象，我们在前端代码中就可以动态生成文件，提供给浏览器下载。打开Chrome浏览器调试窗口，在Elements标签下可以看到生成的Blob URL为：
 
-![mark](http://img.gongyz.cn/blog/181031/5bE1bG760D.jpg)
+![mark](http://pvwllote4.bkt.clouddn.com/blog/181031/5bE1bG760D.jpg)
 
 - 图片资源地址
 
@@ -217,11 +217,11 @@ Blob URL可以通过`URL.createObjectURL(blob)`创建。在绝大部分场景下
 
 input中选择的图片会在<img>里显示出来，如图所示：
 
-![mark](http://img.gongyz.cn/blog/181031/Cm2EDdd201.jpg)
+![mark](http://pvwllote4.bkt.clouddn.com/blog/181031/Cm2EDdd201.jpg)
 
 同时，可以在Network标签栏，发现这个Blob URL的请求信息：
 
-![mark](http://img.gongyz.cn/blog/181031/eE7LldFHA9.jpg)
+![mark](http://pvwllote4.bkt.clouddn.com/blog/181031/eE7LldFHA9.jpg)
 
 这个请求信息和平时我们使用的Http URL获取图片几乎完全一样。我们还可以使用Data URL加载图片资源：
 
@@ -256,7 +256,7 @@ input中选择的图片会在<img>里显示出来，如图所示：
 
 FileReader的`readAsDataURL`生成一个Data URL，如图所示：
 
-![mark](http://img.gongyz.cn/blog/181031/B819BkEh5E.jpg)
+![mark](http://pvwllote4.bkt.clouddn.com/blog/181031/B819BkEh5E.jpg)
 
 Data URL对大家来说应该并不陌生，Web性能优化中有一项措施：把小图片用base64编码直接嵌入到HTML文件中，实际上就是利用了Data URL来获取嵌入的图片数据。
 

@@ -62,30 +62,30 @@ keytool -list -v -keystore my-release-key.keystore
 
 如果你还没有注册App，则需要登陆developer.apple.com注册。然后在Identifiers下AppIDs找到自己的App ID，并打开Associated Domains服务。
 
-![mark](http://img.gongyz.cn/blog/181030/e0KFhCKCLa.png)
+![mark](http://pvwllote4.bkt.clouddn.com/blog/181030/e0KFhCKCLa.png)
 
 #### 2. 在Xcode中开启Associated Domains服务
 
 - 打开Associated Domains服务
 
-  ![mark](http://img.gongyz.cn/blog/181030/d3CjiLlLCG.png)
+  ![mark](http://pvwllote4.bkt.clouddn.com/blog/181030/d3CjiLlLCG.png)
 
 - 添加域名，点击Associated Domains的“+”添加前缀为applinks:的域名，如下图所示
 
-  ![mark](http://img.gongyz.cn/blog/181030/6dk58fEi6E.png)
+  ![mark](http://pvwllote4.bkt.clouddn.com/blog/181030/6dk58fEi6E.png)
 
 #### 3.配置apple-app-site-association文件
 
 文件格式如下图所示：
 
-![mark](http://img.gongyz.cn/blog/181030/3mhaLhDHKA.png)
+![mark](http://pvwllote4.bkt.clouddn.com/blog/181030/3mhaLhDHKA.png)
 
 - paths对应域名中的path，用于过滤可以跳转到App的链接，支持通配符‘*’，‘？’以及‘NOT’进行匹配，匹配的优先级是从左至右依次降低。
 
 
 - appID对应项由前缀和ID两部分组成，可以在developer.apple.com中的Identifiers→AppIDs中点击对应的App ID查看。
 
-  ![mark](http://img.gongyz.cn/blog/181030/HDeh50BC4j.png)
+  ![mark](http://pvwllote4.bkt.clouddn.com/blog/181030/HDeh50BC4j.png)
 
 #### 4.上传这个文件到服务器的.well-known文件夹
 

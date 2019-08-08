@@ -67,7 +67,7 @@ JS 引擎阻塞状态下计时不准确，所以由浏览器另开线程单独�
 
 js 一直在做一个工作，就是从任务队列里提取任务，放到主线程里执行，看下面这张图：
 
-![mark](http://img.gongyz.cn/blog/20190123/u8rkfQEHPu7h.png?imageslim)
+![mark](http://pvwllote4.bkt.clouddn.com/blog/20190123/u8rkfQEHPu7h.png?imageslim)
 
 - JS 运行时引擎(runtime)：也就是 js 线程，由内存堆(heap)和调用栈(stack)组成，其中内存堆是用于内存分配，调用栈是代码执行时的栈
 - Web APIs：上文中说到的浏览器为异步任务单独开辟的线程在这里可以统一理解为 Web APIs

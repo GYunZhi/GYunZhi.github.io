@@ -232,7 +232,7 @@ function call(handle, route, err, req, res, next) {
 
 通过下面的这张图，总结一下connect工作流程，app.use方法负责把中间件添加到stack数组中，中间件会被格式化成形为{route: route , handle : fn}的匿名对象存放 ；app.handle方法根据当前路径找到stack中所有与之相匹配的中间件，并通过call方法调用中间件处理函数 ；app.call方法根据handle函数的参数个数(3个参数为一般中间件，4个参数为错误处理中间件) 来执行中间件，并把接收的next函数传给中间件。
 
-![mark](http://img.gongyz.cn/blog/181030/5ce8BaBg39.png)
+![mark](http://pvwllote4.bkt.clouddn.com/blog/181030/5ce8BaBg39.png)
 
 ### 完整源码
 
