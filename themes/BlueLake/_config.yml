@@ -16,14 +16,14 @@ menu:
   - page: about
     directory: about/
     icon: fa-user
-  - page: rss
-    directory: atom.xml
-    icon: fa-rss
+  # - page: rss
+  #   directory: atom.xml
+  #   icon: fa-rss
 
 # Sidebar
 widgets:
   - recent_posts
-  #- aplayer
+  # - aplayer
   - category
   - tag
   - archive
@@ -48,7 +48,7 @@ date_formats:
 
 # Extensions
 Plugins:
-  hexo-generator-feed
+  # hexo-generator-feed
   hexo-generator-sitemap
   hexo-generator-baidu-sitemap
 

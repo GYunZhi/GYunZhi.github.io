@@ -10,18 +10,6 @@ function removeClass(obj, cls) {
         obj.className = obj.className.replace(reg, ' ');
     }
 }
-window.onscroll = function() {
-  var totop = document.getElementById('totop');
-  var scroll = document.documentElement.scrollTop || document.body.scrollTop || window.scrollY;
-  if (scroll >= 300) {
-    addClass(totop,"show");
-    //totop.classList.add("show");
-  } else {
-    removeClass(totop,"show");
-    removeClass(totop,"launch");
-    //totop.classList.remove("show", "launch");
-  }
-};
 function gotoTop(aSpeed, time) {
   aSpeed = aSpeed || 0.1;
   time = time || 10;
@@ -40,4 +28,16 @@ totop.onclick = function() {
   addClass(totop,"launch");
   //totop.classList.add('launch');
   return false;
+};
+window.onscroll = function() {
+  var totop = document.getElementById('totop');
+  var scroll = document.documentElement.scrollTop || document.body.scrollTop || window.scrollY;
+  if (scroll >= 300) {
+    addClass(totop,"show");
+    //totop.classList.add("show");
+  } else {
+    removeClass(totop,"show");
+    removeClass(totop,"launch");
+    //totop.classList.remove("show", "launch");
+  }
 };
