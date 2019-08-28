@@ -160,7 +160,7 @@ npm start || node ./bin/www
 
 首先我们看一下Express的源码结构：
 
-![mark](http://pvwllote4.bkt.clouddn.com/blog/20190228/L86HlXsRhwYH.png?imageslim)
+![mark](https://gongyz.oss-cn-shenzhen.aliyuncs.com/blog/L86HlXsRhwYH.png?imageslim)
 
 ```
 middleware:	中间件
@@ -192,7 +192,7 @@ view.js 模版相关
 
 Express中的中间件和connect中不太一样，因为Express有两种中间件，**普通中间件、路由中间件**。
 
-![](http://pvwllote4.bkt.clouddn.com/blog/20190711/ga75BUM7nW6R.png?imageslim)
+![](https://gongyz.oss-cn-shenzhen.aliyuncs.com/blog/ga75BUM7nW6R.png?imageslim)
 
 app初始化时，会push两个中间件（init，query）进router.stack里。我们可以通过app.use往app添加非路由中间件，也可以通过app[METHOD]添加路由中间件。
 
@@ -215,7 +215,7 @@ app初始化时，会push两个中间件（init，query）进router.stack里。�
 
 ### Express 运行原理
 
-![mark](http://pvwllote4.bkt.clouddn.com/blog/181030/gJbi318Jci.png)
+![mark](https://gongyz.oss-cn-shenzhen.aliyuncs.com/blog/gJbi318Jci.png)
 
 ### Express基本使用
 
